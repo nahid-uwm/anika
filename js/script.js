@@ -1,53 +1,89 @@
-/**
- * Subtle parallax movement for the floating shards + gentle glow drift.
- * Keeps the same “premium” motion feel as the screenshot (quiet, not gimmicky).
- */
-(function () {
-    const stage = document.getElementById('stage');
-    const shards = Array.from(document.querySelectorAll('.shard'));
-    const ring = document.querySelector('.search .ring');
+// Mobile Menu Toggle
+const mobileToggle = document.querySelector('.mobile-toggle');
+const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    let mx = 0, my = 0;
-    let tx = 0, ty = 0;
-    let t = 0;
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
+    });
+}
 
-    function onMove(e) {
-        // Safety check if stage exists
-        if (!stage) return;
+// Close menu on link click
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
 
-        const r = stage.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width;   // 0..1
-        const y = (e.clientY - r.top) / r.height;  // 0..1
-        mx = (x - 0.5) * 2; // -1..1
-        my = (y - 0.5) * 2;
-    }
+// Scroll Reveal Animation
+const observerOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+};
 
-    if (stage) {
-        stage.addEventListener('mousemove', onMove, { passive: true });
-    }
-
-    function animate() {
-        // smooth follow
-        tx += (mx - tx) * 0.06;
-        ty += (my - ty) * 0.06;
-
-        // animate shards
-        shards.forEach(el => {
-            const depth = Number(el.dataset.depth || 10);
-            const dx = tx * depth;
-            const dy = ty * depth * 0.7;
-            el.style.transform = `${el.style.transform.split(' translate')[0]} translate(${dx}px, ${dy}px)`;
-        });
-
-        // gentle gradient drift
-        if (ring) {
-            t += 0.004;
-            const drift = Math.sin(t) * 10;
-            ring.style.opacity = (0.50 + (Math.sin(t * 1.7) + 1) * 0.06).toFixed(3);
-            ring.style.transform = `translateX(${drift}px)`;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
         }
+    });
+}, observerOptions);
 
-        requestAnimationFrame(animate);
+document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+// Sticky Header Glass Effect
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
-    requestAnimationFrame(animate);
-})();
+});
+
+// Modal Logic
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal on outside click
+window.onclick = function (event) {
+    if (event.target.classList.contains('modal-backdrop')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Scroll To Top
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+    if (scrollTopBtn) {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

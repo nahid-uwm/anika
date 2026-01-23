@@ -1,105 +1,718 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nahid Hasan | Toolfolio Style</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika Sayeema | Royal Precision in Finance</title>
+    <meta name="description"
+        content="Anika Sayeema: Financial Analyst. Building decision-grade models and executive dashboards.">
 
-    <!-- Font (close to the screenshot vibe). Swap to your preferred font if needed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="Logo/logo.png">
 </head>
 
 <body>
-    <div class="stage" id="stage">
-        <div class="noise"></div>
 
-        <!-- floating decorative shards -->
-        <div class="floatLayer" aria-hidden="true">
-            <div class="shard s1" data-depth="10"></div>
-            <div class="shard s2" data-depth="16"></div>
-            <div class="shard s3" data-depth="7"></div>
-            <div class="shard s4" data-depth="18"></div>
-            <div class="shard s5" data-depth="12"></div>
+    <!-- Split Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-split-container">
+            <!-- Left Group -->
+            <nav class="nav-group">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+            </nav>
+
+            <!-- Center Logo -->
+            <a href="#about" class="logo-center">
+                <img src="Logo/logo.png" alt="Anika Sayeema" title="Return to Top">
+            </a>
+
+            <!-- Right Group -->
+            <nav class="nav-group">
+                <a href="#case-studies" class="nav-link">Case Studies</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#case-studies" class="mobile-link">Case Studies</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <svg class="hero-crest-bg" viewBox="0 0 200 200" fill="none">
+                <circle cx="100" cy="100" r="90" stroke="#BF953F" stroke-width="0.5" stroke-dasharray="4 4" />
+                <path d="M100 10 L100 190 M10 100 L190 100" stroke="#BF953F" stroke-width="0.2" />
+            </svg>
+
+            <div class="container hero-grid">
+                <div class="hero-content reveal-up">
+                    <span class="text-mono text-gold" style="display: block; margin-bottom: 24px;">EST. 2026 //
+                        FINANCIAL ANALYST</span>
+                    <h1>Royal Precision<br>in Modern Finance.</h1>
+                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 500px; margin: 40px 0;">
+                        I build decision-grade financial models and executive dashboards—turning raw data into a legacy
+                        of clarity.
+                    </p>
+                    <div style="display: flex; gap: 24px;">
+                        <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                        <a href="#contact"
+                            style="display: flex; align-items: center; gap: 8px; color: var(--parchment); font-family: var(--font-display); letter-spacing: 0.1em; opacity: 0.8;">
+                            Contact Me <span style="font-size: 1.2em;">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image reveal-up" style="position: relative; transition-delay: 0.2s;">
+                    <div
+                        style="position: relative; width: 100%; aspect-ratio: 0.8; border: 1px solid rgba(191, 149, 63, 0.3);">
+                        <div
+                            style="position: absolute; inset: 10px; border: 1px solid rgba(191, 149, 63, 0.6); display: flex; align-items: center; justify-content: center; background: rgba(11,28,19,0.8);">
+                            <img src="Logo/logo.png"
+                                style="width: 50%; opacity: 0.8; filter: drop-shadow(0 0 20px rgba(191,149,63,0.5));">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Strip -->
+        <div class="container reveal-up">
+            <div class="metrics-strip">
+                <div class="metric-item">
+                    <span class="metric-num">25+</span>
+                    <span class="text-mono" style="font-size: 0.8rem; opacity: 0.7;">MODELS DEPLOYED</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-num">$500M</span>
+                    <span class="text-mono" style="font-size: 0.8rem; opacity: 0.7;">ASSETS ANALYZED</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-num">100%</span>
+                    <span class="text-mono" style="font-size: 0.8rem; opacity: 0.7;">AUDIT ACCURACY</span>
+                </div>
+            </div>
         </div>
 
-        <div class="wrap">
-            <header>
-                <div class="brand">
-                    <!-- simple angular logo placeholder -->
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M10 30V12h6v12l10-12h8L22 28h-6l-6 7z" fill="rgba(255,255,255,.92)" />
-                    </svg>
-                    <span class="beta">BETA</span>
-                </div>
-
-                <nav>
-                    <a href="#">Libraries</a>
-                    <a href="#">Tool Categories</a>
-                    <a href="#">OG Image Library</a>
-                    <a href="#">About</a>
-                </nav>
-            </header>
-
-            <main class="hero">
-                <div class="heroMark">
-                    <svg class="miniLogo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M9 33l9-18 6 6-7 12H9z" fill="rgba(255,255,255,.9)" />
-                        <path d="M21 15h18l-9 18-9-9z" fill="rgba(123,111,240,.85)" />
-                        <path d="M21 15l9 9-6 9-9-9 6-9z" fill="rgba(207,215,255,.55)" />
-                    </svg>
-                    <div class="label">TOOLFOLIO</div>
-                </div>
-
-                <h1>Discover the best<br />tools on the internet</h1>
-
-                <p class="sub">
-                    Toolfolio is a library with more than a hundred curated tools on the<br />
-                    internet to upgrade productivity.
+        <!-- About / Bio (New) -->
+        <section class="section-padding" style="padding-top: 0;">
+            <div class="container reveal-up" style="max-width: 1000px; text-align: center;">
+                <h2 hidden>About Me</h2>
+                <p style="font-size: 1.25rem; line-height: 1.8; opacity: 0.9;">
+                    I’m <span class="text-gold">Anika Sayeema</span>, an early-career Financial Analyst building strong
+                    fundamentals in FP&A, financial modeling, and finance analytics. I turn raw numbers into clean,
+                    recruiter-friendly outputs—forecast models, variance insights, and dashboards—with a focus on U.S.
+                    workplace expectations: clarity, accuracy, documentation, and business-ready communication.
                 </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.7; margin-top: 30px;">
+                    I’m currently building a portfolio that proves I can contribute on day one: Excel models that
+                    balance, SQL queries that reconcile, and Power BI dashboards that tell the story behind performance.
+                </p>
+            </div>
+        </section>
 
-                <div class="searchArea">
-                    <div class="search">
-                        <div class="ring" aria-hidden="true"></div>
-                        <input type="text" placeholder="What do you need a tool for?" />
-                        <button aria-label="Search">
-                            <!-- magnifier icon -->
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor"
-                                    stroke-width="2" />
-                                <path d="M16.8 16.8 21 21" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
+        <!-- Skills Gallery (Alt BG) -->
+        <section class="section-padding bg-alt" id="skills">
+            <div class="container">
+                <div class="text-center reveal-up">
+                    <h2>Analytical Arsenal</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="luxury-card reveal-up">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        <h3>Financial Modeling</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7; margin: 16px 0;">3-Statement, DCF, and LBO models.
+                        </p>
+                        <span class="text-mono text-gold" style="font-size: 0.8rem;">EXCEL / VBA</span>
+                    </div>
+                    <div class="luxury-card reveal-up" style="transition-delay: 0.1s;">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        <h3>Strategic FP&A</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7; margin: 16px 0;">Rolling forecasts and variance
+                            analysis.</p>
+                        <span class="text-mono text-gold" style="font-size: 0.8rem;">POWER BI / SQL</span>
+                    </div>
+                    <div class="luxury-card reveal-up" style="transition-delay: 0.2s;">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <h3>Valuation & Risk</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7; margin: 16px 0;">Sensitivity tables and stress tests.
+                        </p>
+                        <span class="text-mono text-gold" style="font-size: 0.8rem;">BLOOMBERG</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="section-padding" id="experience">
+            <div class="container">
+                <div class="text-center reveal-up">
+                    <h2>Legacy of Impact</h2>
+                </div>
+                <div class="royal-timeline reveal-up" style="margin-top: 60px;">
+                    <div class="rt-item">
+                        <div class="rt-marker"></div>
+                        <span class="text-mono text-gold" style="font-size: 0.85rem;">2023 — PRESENT</span>
+                        <h3 style="font-size: 1.8rem; margin: 8px 0;">Financial Analyst</h3>
+                        <h4 style="font-family: var(--font-body); font-size: 1.1rem; opacity: 0.8;">Investment Firm</h4>
+                        <p style="max-width: 600px; margin-top: 16px; opacity: 0.7;">Architected a driver-based forecast
+                            model that reduced variance by 20%. Automated reporting save 15hrs/month.</p>
+                    </div>
+                    <div class="rt-item">
+                        <div class="rt-marker"></div>
+                        <span class="text-mono text-gold" style="font-size: 0.85rem;">2022 — 2023</span>
+                        <h3 style="font-size: 1.8rem; margin: 8px 0;">Junior Analyst</h3>
+                        <h4 style="font-family: var(--font-body); font-size: 1.1rem; opacity: 0.8;">Boutique Advisory
+                        </h4>
+                        <p style="max-width: 600px; margin-top: 16px; opacity: 0.7;">Supported $50M+ in deal flow.
+                            Streamlined due diligence data rooms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies (Alt BG) -->
+        <section class="section-padding bg-alt" id="case-studies">
+            <div class="container">
+                <div class="text-center reveal-up">
+                    <h2>Case Studies</h2>
+                </div>
+                <!-- Expanded 2 Column Grid -->
+                <div class="grid-2">
+                    <article class="luxury-card reveal-up" onclick="openModal('modal-saas')" style="cursor:pointer;">
+                        <div class="card-image-frame"><img src="Logo/logo.png" style="opacity:0.3;"></div>
+                        <div class="tag-row"><span class="tag">EXCEL</span><span class="tag">SQL</span><span
+                                class="tag">POWER BI</span></div>
+                        <h3 style="margin: 0 0 12px;">SaaS Revenue Forecasting</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Driver-Based Forecast + KPI Dashboard built for U.S.
+                            metrics.</p>
+                        <span class="text-gold"
+                            style="margin-top:auto; padding-top:20px; font-size:0.8rem; letter-spacing:0.1em;">READ CASE
+                            STUDY →</span>
+                    </article>
+
+                    <article class="luxury-card reveal-up" onclick="openModal('modal-cash')"
+                        style="cursor:pointer; transition-delay:0.1s;">
+                        <div class="card-image-frame"><img src="Logo/logo.png" style="opacity:0.3;"></div>
+                        <div class="tag-row"><span class="tag">EXCEL</span><span class="tag">POWER BI</span></div>
+                        <h3 style="margin: 0 0 12px;">13-Week Cash Forecast</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Working Capital Stress Test & Liquidity Planning.
+                        </p>
+                        <span class="text-gold"
+                            style="margin-top:auto; padding-top:20px; font-size:0.8rem; letter-spacing:0.1em;">READ CASE
+                            STUDY →</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Videos -->
+        <section class="section-padding" id="projects">
+            <div class="container">
+
+                <!-- Projects (Refined to 3 Cards) -->
+                <div class="text-center reveal-up">
+                    <h2 style="margin-bottom: 60px;">Projects</h2>
+                </div>
+                <div class="grid-3 reveal-up" style="margin-bottom: 100px;">
+                    <!-- Project 1 -->
+                    <div class="luxury-card reveal-up" onclick="openModal('modal-proj-1')" style="cursor: pointer;">
+                        <div class="card-image-frame" style="aspect-ratio: 2/1;"><img src="Logo/logo.png"
+                                style="opacity:0.2;"></div>
+                        <h4 style="font-size: 1.1rem; color: var(--gold-text);">3-Statement Starter Model</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">Excel • Balanced model with
+                            assumptions & scenarios.</p>
+                        <span class="text-gold"
+                            style="margin-top:auto; padding-top:20px; font-size:0.8rem; letter-spacing:0.1em;">READ
+                            PROJECT DETAILS →</span>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="luxury-card reveal-up" onclick="openModal('modal-proj-2')" style="cursor: pointer;">
+                        <div class="card-image-frame" style="aspect-ratio: 2/1;"><img src="Logo/logo.png"
+                                style="opacity:0.2;"></div>
+                        <h4 style="font-size: 1.1rem; color: var(--gold-text);">SQL KPI Builder</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">SQL Server • Query library for
+                            churn & cohorts.</p>
+                        <span class="text-gold"
+                            style="margin-top:auto; padding-top:20px; font-size:0.8rem; letter-spacing:0.1em;">READ
+                            PROJECT DETAILS →</span>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="luxury-card reveal-up" onclick="openModal('modal-proj-3')" style="cursor: pointer;">
+                        <div class="card-image-frame" style="aspect-ratio: 2/1;"><img src="Logo/logo.png"
+                                style="opacity:0.2;"></div>
+                        <h4 style="font-size: 1.1rem; color: var(--gold-text);">Power BI Finance Dashboard</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">Power BI • KPI Scorecard & Driver
+                            Drill-down.</p>
+                        <span class="text-gold"
+                            style="margin-top:auto; padding-top:20px; font-size:0.8rem; letter-spacing:0.1em;">READ
+                            PROJECT DETAILS →</span>
                     </div>
                 </div>
 
-                <section class="featured">
-                    <div class="featuredTitle">Featured Tools</div>
-                    <div class="cards">
-                        <article class="card">
-                            <div class="name">Workflow</div>
-                            <div class="tag">Systems</div>
-                        </article>
-                        <article class="card">
-                            <div class="name">Framer Components</div>
-                            <div class="tag">UI Kits</div>
-                        </article>
-                        <article class="card">
-                            <div class="name">Design Research</div>
-                            <div class="tag">Docs</div>
-                        </article>
-                        <article class="card">
-                            <div class="name">Color Palette</div>
-                            <div class="tag">Utilities</div>
-                        </article>
+                <!-- Videos -->
+                <div class="text-center reveal-up">
+                    <h2 style="margin-bottom: 60px;">Videos</h2>
+                </div>
+                <div class="grid-3 reveal-up">
+                    <div class="luxury-card reveal-up"
+                        style="padding: 0; overflow: hidden; aspect-ratio: 16/9; position: relative;">
+                        <img src="Logo/logo.png" style="width: 100%; height: 100%; opacity: 0.2;">
+                        <div class="video-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h4 style="font-size: 1rem;">Variance Analysis Walkthrough</h4>
+                        </div>
                     </div>
-                </section>
-            </main>
+                    <div class="luxury-card reveal-up"
+                        style="padding: 0; overflow: hidden; aspect-ratio: 16/9; position: relative;">
+                        <img src="Logo/logo.png" style="width: 100%; height: 100%; opacity: 0.2;">
+                        <div class="video-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h4 style="font-size: 1rem;">3-Statement Model Structure</h4>
+                        </div>
+                    </div>
+                    <div class="luxury-card reveal-up"
+                        style="padding: 0; overflow: hidden; aspect-ratio: 16/9; position: relative;">
+                        <img src="Logo/logo.png" style="width: 100%; height: 100%; opacity: 0.2;">
+                        <div class="video-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+                            <h4 style="font-size: 1rem;">Power BI KPI Scorecard</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Credentials (Alt BG) -->
+        <section class="section-padding bg-alt" id="credentials">
+            <div class="container">
+                <div class="text-center reveal-up">
+                    <h2>Credentials</h2>
+                </div>
+                <div class="credentials-wrapper reveal-up">
+                    <div>
+                        <h3 class="text-gold"
+                            style="font-size: 1.5rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold-dim); padding-bottom: 12px; display: inline-block;">
+                            Education</h3>
+                        <div class="edu-card">
+                            <h4 style="font-size: 1.2rem;">MBA in Finance</h4>
+                            <p style="font-size: 1rem; opacity: 0.8; margin-top: 4px;">BUP University</p>
+                            <span class="text-mono"
+                                style="opacity: 0.5; font-size: 0.8rem; display: block; margin-top: 12px;">2024</span>
+                        </div>
+                        <div class="edu-card">
+                            <h4 style="font-size: 1.2rem;">BBA in Banking & Finance</h4>
+                            <p style="font-size: 1rem; opacity: 0.8; margin-top: 4px;">Eden College</p>
+                            <span class="text-mono"
+                                style="opacity: 0.5; font-size: 0.8rem; display: block; margin-top: 12px;">2022</span>
+                        </div>
+                        <div class="award-item">
+                            <h4 class="award-title">✦ National Waiver for Best Score</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 8px;">Awarded for excellence in SSC
+                                examinations.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-gold"
+                            style="font-size: 1.5rem; margin-bottom: 40px; border-bottom: 1px solid var(--gold-dim); padding-bottom: 12px; display: inline-block;">
+                            Certifications</h3>
+                        <div class="list-card">
+                            <h4 style="font-size: 1.1rem;">PL-300 Power BI Analyst</h4>
+                            <span class="text-mono" style="opacity: 0.5;">2024</span>
+                        </div>
+                        <div class="list-card">
+                            <h4 style="font-size: 1.1rem;">CFA Level I Candidate</h4>
+                            <span class="text-mono" style="opacity: 0.5;">2025</span>
+                        </div>
+                        <div class="list-card">
+                            <h4 style="font-size: 1.1rem;">Adv. Excel Modeling</h4>
+                            <span class="text-mono" style="opacity: 0.5;">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads / Footer -->
+        <section class="section-padding" id="contact" style="text-align: center;">
+            <div class="container reveal-up">
+                <h2 style="font-size: 3rem;">The Vault</h2>
+                <p style="opacity: 0.7; max-width: 500px; margin: 0 auto 40px;">Access detailed records of my work
+                    history and sample deliverables.</p>
+                <div style="display: flex; gap: 24px; justify-content: center;">
+                    <a href="assets/AnikaSayeema_CV.pdf" class="btn btn-primary">Download CV</a>
+                    <a href="#" class="btn btn-primary">Work Samples</a>
+                </div>
+                <div style="margin-top: 80px; opacity: 0.4;">
+                    <img src="Logo/logo.png" style="height: 40px; margin: 0 auto 20px;">
+                    <p class="text-mono" style="font-size: 0.75rem;">© 2026 ANIKA SAYEEMA. ROYAL PRECISION.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <!-- Modals -->
+    <div id="modal-saas" class="modal-backdrop">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal('modal-saas')">×</button>
+            <span class="text-mono text-gold">CASE STUDY 01</span>
+            <h2 style="margin-bottom: 24px;">Budget vs Actual Variance Pack + KPI Scorecard</h2>
+
+            <div style="display: flex; flex-direction: column; gap: 30px; line-height: 1.8;">
+
+                <!-- TLDR -->
+                <div style="padding-bottom: 20px; border-bottom: 1px solid rgba(191,149,63,0.2);">
+                    <p style="font-size: 1.05rem; opacity: 0.9;">
+                        <strong class="text-gold">TLDR:</strong> We built a standardized monthly FP&A reporting pack (in
+                        Excel and Power BI) that includes: a <span class="text-gold">variance bridge</span> (actual vs
+                        budget vs prior period) to clearly itemize drivers of change; a <span class="text-gold">KPI
+                            scorecard</span> with clear targets, color-coded RAG thresholds (green/amber/red), and trend
+                        charts for context; a structured <span class="text-gold">commentary template</span> (“What
+                        happened/Why/Next steps”) to translate variances into business insights; and embedded <span
+                            class="text-gold">audit checks</span> (balance and sum reconciliations, error flags) to
+                        catch broken links.
+                        <br><br>
+                        <em>For example, JPMorgan’s Q4 2025 report showed net revenue of $46.8B (up 7%) driven by
+                            Markets revenue $8.2B (up 17%) – our pack would highlight such drivers visually.</em> The
+                        outcome is a repeatable report that saves analysts hours of manual work (freeing them “to
+                        interpret the results” rather than crunch numbers) and provides a clear story for management.
+                    </p>
+                </div>
+
+                <!-- Challenge -->
+                <div>
+                    <h3 class="text-gold" style="font-size: 1.4rem; margin-bottom: 16px;">The Challenge: Opaque Monthly
+                        Reporting</h3>
+                    <p style="opacity: 0.85;">
+                        Many US FP&A teams close the books on Day 1–3 of each month, only to spend hours chasing numbers
+                        to explain the results. As one FP&A expert notes, “variance analysis is one of the most
+                        time-consuming parts of month-end reporting,” often requiring “countless hours” to compare
+                        actuals against budgets and craft commentary. In our case, the monthly pack existed but lacked
+                        clarity: spreadsheets contained data, but it wasn’t obvious why actuals deviated from plan.
+                        Teams often rebuild the same reports every month instead of reusing templates, further wasting
+                        time. We needed a solution that made drivers and trends transparent and repeatable.
+                    </p>
+                </div>
+
+                <!-- Solution -->
+                <div>
+                    <h3 class="text-gold" style="font-size: 1.4rem; margin-bottom: 20px;">Our Solution: A Standardized
+                        FP&A Pack</h3>
+                    <p style="opacity: 0.85; margin-bottom: 20px;">
+                        We designed a compact yet comprehensive reporting package using Excel for
+                        calculations/commentary and Power BI for visualization. Key components (based on FP&A best
+                        practices) include:
+                    </p>
+
+                    <div style="display: grid; gap: 24px;">
+                        <div>
+                            <h4 style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 8px;">1. Variance
+                                Bridge (Actual vs Budget vs Prior Month)</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                We created a waterfall-style “bridge” chart/table that starts with either last period’s
+                                actuals or full-year budget and sequentially adds up each variance. This bridge explains
+                                the total change by line item (e.g. sales, COGS, expenses) or category. In FP&A terms, a
+                                “bridge” is simply “a way of explaining how two numbers compare to one another.” Bridges
+                                are highly versatile: CFO analysts use them for “Budget vs Actual” and “Prior Year vs
+                                Current Year” comparisons. In our pack, the bridge highlights both budget variances and
+                                period-over-period changes.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 8px;">2. KPI Scorecard
+                                with Thresholds and Trends</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                We built a one-page KPI dashboard. Each key metric (e.g. revenue growth, EBITDA margin,
+                                cash burn) shows the current value, the target/budget, and simple sparkline or
+                                mini-chart for recent months. Importantly, we applied traffic-light thresholds:
+                            </p>
+                            <ul style="margin: 10px 0 10px 20px; opacity: 0.8; font-size: 0.9rem;">
+                                <li><span style="color: #4CAF50;">● Green</span>: metric meets or exceeds target.</li>
+                                <li><span style="color: #FFC107;">● Amber</span>: worse than target but better than last
+                                    year (or within tolerance).</li>
+                                <li><span style="color: #F44336;">● Red</span>: worse than both target and prior year.
+                                </li>
+                            </ul>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                This RAG coloring aligns with industry practice and draws the eye to issues. We also
+                                include trend context: showing each KPI’s history so users can distinguish meaningful
+                                trends from one-off blips.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 8px;">3. Commentary
+                                Template (“What / Why / Next Steps”)</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                Numbers alone aren’t enough, so we included a commentary text area with prompts.
+                                Following best practices, our template guides the analyst to write: <strong>What
+                                    happened</strong> (in plain business terms), <strong>Why</strong> the variance
+                                occurred, and <strong>How</strong> it impacts the rest of the year. This mirrors expert
+                                advice that variance write-ups should tell a story.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 8px;">4. Basic Audit
+                                Checks</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                To avoid errors and broken links, we built in simple validation formulas. We have
+                                balance checks (e.g. Assets = Liabilities + Equity) and summation checks. We flagged any
+                                mismatches with conditional formatting (turning flags red). In our pack we also
+                                color-code input vs calculation cells and locked formula cells.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size: 1.1rem; color: var(--parchment); margin-bottom: 8px;">5. Tools: Excel
+                                and Power BI</h4>
+                            <p style="font-size: 0.95rem; opacity: 0.8;">
+                                We leveraged Excel for the core variance calculations, commentary, and as the data
+                                source. Then we used Power BI to connect to the Excel data for interactive visuals (the
+                                KPI dashboard and dynamic bridges). This hybrid approach is common in FP&A: Excel
+                                remains king for flexible modeling, while Power BI helps turn numbers into visuals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outcome -->
+                <div>
+                    <h3 class="text-gold" style="font-size: 1.4rem; margin-bottom: 16px;">Outcome & Benefits</h3>
+                    <ul style="list-style: none; padding: 0; display: grid; gap: 12px; opacity: 0.85;">
+                        <li style="display: flex; gap: 12px;">
+                            <span class="text-gold">✓</span>
+                            <span><strong>Clear insights:</strong> Key drivers of performance are explicit. The
+                                structured bridge shows exactly which lines over- or underperformed.</span>
+                        </li>
+                        <li style="display: flex; gap: 12px;">
+                            <span class="text-gold">✓</span>
+                            <span><strong>Faster reporting:</strong> By reusing templates and automation, analysts spend
+                                far less time “hunting through spreadsheets” and more time analyzing.</span>
+                        </li>
+                        <li style="display: flex; gap: 12px;">
+                            <span class="text-gold">✓</span>
+                            <span><strong>Consistency and accuracy:</strong> Every monthly report follows the same logic
+                                and layout. Audit checks catch errors early.</span>
+                        </li>
+                        <li style="display: flex; gap: 12px;">
+                            <span class="text-gold">✓</span>
+                            <span><strong>Actionable focus:</strong> With clear commentary prompts and visual cues,
+                                discussions during monthly reviews can be more strategic.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Key Takeaways Box -->
+                <div
+                    style="background: rgba(191,149,63,0.1); border: 1px solid rgba(191,149,63,0.3); padding: 24px; border-radius: 4px;">
+                    <h3 class="text-gold" style="font-size: 1.2rem; margin-bottom: 16px;">Key Points & Takeaways</h3>
+                    <ul style="padding-left: 20px; opacity: 0.9; line-height: 1.6;">
+                        <li style="margin-bottom: 8px;">Use a variance bridge (waterfall chart) to reconcile Actual vs
+                            Budget vs Prior figures.</li>
+                        <li style="margin-bottom: 8px;">Include a KPI scorecard with goals, RAG thresholds
+                            (Green/Amber/Red), and trend lines.</li>
+                        <li style="margin-bottom: 8px;">Structure narrative commentary as <strong>What / Why / How /
+                                Next Steps</strong>.</li>
+                        <li style="margin-bottom: 8px;">Embed audit checks (reconciliations, IFERROR flags) to catch
+                            broken links.</li>
+                        <li style="margin-bottom: 8px;">Leverage Excel for flexible modeling and Power BI for automated
+                            dashboards.</li>
+                        <li>Standardize templates to avoid reinventing the wheel each month.</li>
+                    </ul>
+                </div>
+
+                <!-- References -->
+                <div
+                    style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.6;">
+                    <h4 style="color: var(--gold-dim); margin-bottom: 10px;">References</h4>
+                    <p style="margin-bottom: 4px;">Barnhurst, P. (2022). Variance Commentary. The FP&A Guy.</p>
+                    <p style="margin-bottom: 4px;">Corporate Finance Institute. (n.d.). How to become a financial
+                        analyst.</p>
+                    <p style="margin-bottom: 4px;">JPMorgan Chase & Co. (2026). Fourth-quarter 2025 financial results.
+                    </p>
+                    <p style="margin-bottom: 4px;">Martinez, C. (2026). Three practical ways to speed up month-end
+                        closing with AI. FP&A Trends.</p>
+                    <p style="margin-bottom: 4px;">Saini, M., & Anand, N. (2025). JPMorgan lifts interest income
+                        forecast.</p>
+                    <p style="margin-bottom: 4px;">Spider Strategies. (2025). KPI Reports 101.</p>
+                    <p style="margin-bottom: 4px;">The Secret CFO. (2023). The power of KPIs.</p>
+                    <p style="margin-bottom: 4px;">The Secret CFO. (2025). Don’t go chasing waterfalls: The art and
+                        science of variance analysis.</p>
+                    <p style="margin-bottom: 4px;">FinancialModelsLab. (2025). What you need to know about Excel
+                        financial models.</p>
+                    <p>FloQast. (2025). Budget variance analysis: Basics to expert insights.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal-cash" class="modal-backdrop">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal('modal-cash')">×</button>
+            <span class="text-mono text-gold">CASE STUDY 02</span>
+            <h2 style="margin-bottom: 24px;">13-Week Cash Forecast</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">The Challenge</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 30px;">
+                        Cash visibility was reactive and fragmented—collections, payables, and commitments weren’t
+                        connected to a forward-looking plan.
+                    </p>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">The Outcome</h4>
+                    <ul style="list-style-type: none; padding-left: 0; opacity: 0.8; line-height: 1.8;">
+                        <li style="margin-bottom: 8px;">✓ Improved cash planning discipline.</li>
+                        <li style="margin-bottom: 8px;">✓ Clearer risk scenarios.</li>
+                        <li>✓ Deliverable maps directly to corporate finance roles.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">What I Built</h4>
+                    <ul style="opacity: 0.8; line-height: 1.8; margin-left: 20px;">
+                        <li style="margin-bottom: 8px;">13-week cash flow with receipt/payment timing logic.</li>
+                        <li style="margin-bottom: 8px;">Working capital drivers: DSO, DPO, inventory turns.</li>
+                        <li style="margin-bottom: 8px;">Stress tests (late collections, margin compression).</li>
+                        <li>KPI dashboard to monitor cash runway.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modals -->
+    <div id="modal-proj-1" class="modal-backdrop">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal('modal-proj-1')">×</button>
+            <span class="text-mono text-gold">PROJECT 01</span>
+            <h2 style="margin-bottom: 24px;">3-Statement Starter Model</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">Demo Details</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px;">
+                        A fully dynamic Excel model featuring switchable operating cases (Base, Upside, Downside). It
+                        connects the Income Statement, Balance Sheet, and Cash Flow Statement with automated circularity
+                        handling.
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 0; opacity: 0.8; line-height: 1.8;">
+                        <li>✓ Circularity Toggle</li>
+                        <li>✓ Debt Schedule Integration</li>
+                        <li>✓ Clean formatting for print/PDF</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">What I Built</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">
+                        Built the core logic from scratch, ensuring the balance sheet always balances. Implemented error
+                        checks and a summary dashboard to visualize key credit metrics under different scenarios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-proj-2" class="modal-backdrop">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal('modal-proj-2')">×</button>
+            <span class="text-mono text-gold">PROJECT 02</span>
+            <h2 style="margin-bottom: 24px;">SQL KPI Builder</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">Demo Details</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px;">
+                        A library of SQL stored procedures and views designed to calculate standardized SaaS metrics
+                        from raw CRM data. Focuses on data hygiene and performance.
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 0; opacity: 0.8; line-height: 1.8;">
+                        <li>✓ Automated Churn Calculation</li>
+                        <li>✓ Cohort Retention Groups</li>
+                        <li>✓ Master Date Table generation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">What I Built</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">
+                        Wrote optimized queries to join Salesforce tables with billing data. Created a view layer that
+                        allows BI tools to ingest clean, pre-calculated metrics without complex transformations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-proj-3" class="modal-backdrop">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal('modal-proj-3')">×</button>
+            <span class="text-mono text-gold">PROJECT 03</span>
+            <h2 style="margin-bottom: 24px;">Power BI Finance Dashboard</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">Demo Details</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 20px;">
+                        An interactive executive dashboard providing a high-level view of company health with drill-down
+                        capabilities to regional and department levels.
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 0; opacity: 0.8; line-height: 1.8;">
+                        <li>✓ YoY & MoM Growth Measures</li>
+                        <li>✓ Dynamic Title & Labels</li>
+                        <li>✓ Row-Level Security (RLS)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gold" style="font-size: 1.1rem; margin-bottom: 16px;">What I Built</h4>
+                    <p style="font-size: 0.95rem; opacity: 0.8;">
+                        Designed the data model (Star Schema) and wrote custom DAX measures for time-intelligence.
+                        Implemented bookmarks for switching between 'Revenue' and 'Profit' views seamlessly.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
