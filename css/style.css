@@ -109,26 +109,35 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 60px;
-    /* Increased for center layout */
+    margin-bottom: -60px;
     position: relative;
     display: inline-block;
 }
 
 /* Gold Underline Decoration */
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 1px;
-    background: var(--gold-metallic);
+/* Section Divider (Icon + Lines) */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     margin-top: 15px;
+    margin-bottom: 60px;
+    width: 100%;
 }
 
-.text-center h2::after {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
+.section-divider .line {
+    height: 1px;
+    width: 60px;
+    background: var(--gold-metallic);
+    opacity: 0.8;
+}
+
+.section-divider .icon {
+    color: var(--gold-text);
+    width: 16px;
+    height: 16px;
+    opacity: 0.9;
 }
 
 .text-gold {
@@ -477,9 +486,19 @@ h2::after {
 /* Enhanced Credentials Layout */
 .credentials-wrapper {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
+}
+
+.credential-header {
+    font-size: 1.5rem;
+    color: var(--gold-text);
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 12px;
+    display: inline-block;
+    width: 100%;
 }
 
 .edu-card {
@@ -650,10 +669,58 @@ h2::after {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.award-title {
+/* Highlight Award */
+.award-highlight {
+    margin-top: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(191, 149, 63, 0.05) 0%, rgba(11, 28, 19, 0.6) 100%);
+    border: 1px solid rgba(191, 149, 63, 0.4);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s var(--ease-luxury);
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.award-highlight:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-text);
+    box-shadow: 0 10px 30px rgba(191, 149, 63, 0.15);
+    background: linear-gradient(135deg, rgba(191, 149, 63, 0.08) 0%, rgba(11, 28, 19, 0.7) 100%);
+}
+
+.award-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gold-metallic);
+}
+
+.award-icon-box {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-text);
+    background: rgba(11, 28, 19, 0.8);
+    box-shadow: 0 0 15px rgba(191, 149, 63, 0.2);
+}
+
+.award-title-lg {
     color: var(--gold-text);
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 /* Scroll Reveal Class */
