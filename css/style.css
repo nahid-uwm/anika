@@ -143,6 +143,7 @@ h2 {
 .text-gold {
     background: var(--gold-metallic);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
@@ -180,6 +181,7 @@ h2 {
     position: relative;
     overflow: hidden;
     border-radius: 2px;
+    text-decoration: none;
 }
 
 .btn-primary {
